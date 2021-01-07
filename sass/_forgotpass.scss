@@ -1,0 +1,149 @@
+.container2 {
+    height: 100vh;
+    width: 100%;
+    background-image: url(../assets/images/background.jpeg);
+    background-size: cover;
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+.forgotpass__block {
+    padding: 8rem 5rem;
+    margin: auto;
+    width: 34%;
+    height: auto;
+    background-color: hsla(120, 2%, 1%, 0.3);
+    box-shadow: 0 0.5rem 3.5rem #d4e4d3;
+    border-radius: 5px;
+
+    @media (max-width: 930px) {
+        padding: 2.5rem 2rem;
+        width: 85%;
+    }
+
+    @media (max-width: 575px) {
+        width: 96%;
+    }
+
+    &-logo {
+        align-self: center;
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        img {
+            margin-right: 1rem;
+            width: 23%;
+        }
+
+        &>span {
+            color: $color-white;
+            font-family: "nunito bold";
+            font-size: 3.6rem;
+            @media (max-width: 930px) {
+                font-size: 3rem;;
+            }
+        }
+    }
+
+    &-form {
+        margin-left: 1.4rem;
+        width: 100%;
+
+        >span {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &-input {
+        background-color: $color-white;
+        margin-left: -3.5rem;
+        border: none;
+        outline: none;
+        padding: 1.1rem 2rem;
+        border-radius: 5px;
+        width: 100%;
+        padding-left: 6rem;
+        font-family: "nunito regular";
+        color: #343a40;
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+
+        &::placeholder {
+            color: rgb(139, 137, 137);
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            font-family: "nunito regular";
+        }
+
+    }
+
+    &-button {
+        display: flex;
+        align-items: center;
+        border: none;
+        background-color: transparent;
+        z-index: 2;
+
+        &::after {
+            margin-left: 4px;
+            display: block;
+            content: "";
+            height: 4rem;
+            width: 1px;
+            background-color: #e6ebf4
+        }
+    }
+
+    &-icon {
+        height: 2rem;
+        width: 2rem;
+        fill: #574f49;
+    }
+
+    &-submit {
+        border: none;
+        outline: none;
+        padding: .6rem 0;
+        border-radius: 5px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: -1.4rem;
+        transition: all .4s;
+
+        >span {
+            color: $color-white;
+            font-size: 1.6rem;
+            font-family: "nunito bold";
+        }
+
+        &.first {
+            background-color: #669933;
+            margin-bottom: 1.5rem;
+
+            &:hover {
+                transform: translateY(-2px);
+                background-color: #689550;
+            }
+        }
+
+        &.second {
+            background-color: #3c90df;
+
+            &:hover {
+                transform: translateY(-2px);
+                background-color: #409eff;
+            }
+        }
+
+        >svg {
+            height: 1.8rem;
+            width: 1.8rem;
+            fill: $color-white;
+            margin-right: 1rem;
+        }
+    }
+}

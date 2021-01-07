@@ -1,0 +1,604 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "nunito regular";
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@font-face {
+  font-family: "nunito regular";
+  src: url(../assets/fonts/NunitoSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: "nunito semibold";
+  src: url(../assets/fonts/NunitoSans-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "nunito bold";
+  src: url(../assets/fonts/NunitoSans-Bold.ttf);
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.fd-c {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.ai {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tt-u {
+  text-transform: uppercase;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../assets/images/background.jpeg);
+  background-size: cover;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 575px) {
+  .container {
+    height: auto;
+    padding: 2% 0;
+  }
+}
+
+.signup__block {
+  padding: 8.5rem 3.5rem;
+  margin: auto;
+  width: 58%;
+  height: auto;
+  background-color: rgba(2, 3, 2, 0.3);
+  -webkit-box-shadow: 0 0.5rem 3.5rem #d4e4d3;
+          box-shadow: 0 0.5rem 3.5rem #d4e4d3;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 10rem;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 991px) {
+  .signup__block {
+    padding: 4rem 2rem;
+    grid-column-gap: 5rem;
+  }
+}
+
+@media screen and (max-width: 832px) {
+  .signup__block {
+    padding: 6rem 2rem;
+    grid-column-gap: 5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .signup__block {
+    padding: 2rem 3rem;
+    width: 77%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    grid-column-gap: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .signup__block {
+    padding: 2rem 3.5rem;
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .signup__block-col1 {
+    width: 105%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .signup__block-col2 {
+    width: 100%;
+    margin-bottom: 6rem;
+  }
+}
+
+.signup__block-info {
+  letter-spacing: 1px;
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: #f9dcd1;
+  color: #74290e;
+  border-color: #f6cebf;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 767px) {
+  .signup__block-info {
+    font-size: 1.5rem;
+  }
+}
+
+.signup__block-btn {
+  margin-top: 1.5rem;
+  padding: 1rem 0;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  font-family: "nunito bold";
+  font-weight: 700;
+  color: #f6f9f3;
+  background-color: #3c90df;
+  text-align: center;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.signup__block-btn:hover {
+  background-color: #409eff;
+  -webkit-box-shadow: 0 1px 1rem rgba(212, 228, 211, 0.4);
+          box-shadow: 0 1px 1rem rgba(212, 228, 211, 0.4);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+.signup__block-logo {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 3rem;
+  padding-right: 3rem;
+}
+
+.signup__block-logo img {
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .signup__block-logo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .signup__block-logo {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 832px) {
+  .signup__block-logo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .signup__block-logo {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+.signup__block-logo > span {
+  color: #f6f9f3;
+  font-family: "nunito bold";
+  font-size: 3.6rem;
+}
+
+@media screen and (max-width: 767px) {
+  .signup__block-logo > span {
+    font-size: 3rem;
+  }
+}
+
+.signup__block-title {
+  color: #f6f9f3;
+  font-family: "nunito semibold";
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 575px) {
+  .signup__block-title {
+    font-size: 2rem;
+  }
+}
+
+.signup__block-submit {
+  border: none;
+  outline: none;
+  padding: .6rem 0;
+  border-radius: 5px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: -1.4rem;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.signup__block-submit > span {
+  color: #f6f9f3;
+  font-size: 1.6rem;
+  font-family: "nunito bold";
+}
+
+.signup__block-submit.first {
+  background-color: #82b54b;
+  margin-bottom: 1.5rem;
+}
+
+.signup__block-submit.first:hover {
+  background-color: #689550;
+}
+
+.signup__block-submit.second {
+  background-color: #343a40;
+}
+
+.signup__block-submit.second:hover {
+  background-color: #000000;
+}
+
+.signup__block-submit > svg {
+  height: 1.8rem;
+  width: 1.8rem;
+  fill: #f6f9f3;
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  .signup__block-form {
+    margin-right: -3rem;
+  }
+}
+
+.signup__block-form > span {
+  margin-bottom: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signup__block-input {
+  margin-left: -3.5rem;
+  background-color: #f6f9f3;
+  border: none;
+  outline: none;
+  padding: 1.1rem 2rem;
+  border-radius: 5px;
+  width: 100%;
+  padding-left: 6rem;
+  font-family: "nunito regular";
+  color: #343a40;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+.signup__block-input::-webkit-input-placeholder {
+  color: #8b8989;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-family: "nunito regular";
+}
+
+.signup__block-input:-ms-input-placeholder {
+  color: #8b8989;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-family: "nunito regular";
+}
+
+.signup__block-input::-ms-input-placeholder {
+  color: #8b8989;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-family: "nunito regular";
+}
+
+.signup__block-input::placeholder {
+  color: #8b8989;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-family: "nunito regular";
+}
+
+.signup__block-button {
+  border: none;
+  background-color: transparent;
+  z-index: 2;
+}
+
+.signup__block-icon {
+  height: 2rem;
+  width: 2rem;
+  fill: #574f49;
+}
+
+.container2 {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../assets/images/background.jpeg);
+  background-size: cover;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+
+.forgotpass__block {
+  padding: 8rem 5rem;
+  margin: auto;
+  width: 34%;
+  height: auto;
+  background-color: rgba(2, 3, 2, 0.3);
+  -webkit-box-shadow: 0 0.5rem 3.5rem #d4e4d3;
+          box-shadow: 0 0.5rem 3.5rem #d4e4d3;
+  border-radius: 5px;
+}
+
+@media (max-width: 930px) {
+  .forgotpass__block {
+    padding: 2.5rem 2rem;
+    width: 85%;
+  }
+}
+
+@media (max-width: 575px) {
+  .forgotpass__block {
+    width: 96%;
+  }
+}
+
+.forgotpass__block-logo {
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2rem;
+}
+
+.forgotpass__block-logo img {
+  margin-right: 1rem;
+  width: 23%;
+}
+
+.forgotpass__block-logo > span {
+  color: #f6f9f3;
+  font-family: "nunito bold";
+  font-size: 3.6rem;
+}
+
+@media (max-width: 930px) {
+  .forgotpass__block-logo > span {
+    font-size: 3rem;
+  }
+}
+
+.forgotpass__block-form {
+  margin-left: 1.4rem;
+  width: 100%;
+}
+
+.forgotpass__block-form > span {
+  margin-bottom: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.forgotpass__block-input {
+  background-color: #f6f9f3;
+  margin-left: -3.5rem;
+  border: none;
+  outline: none;
+  padding: 1.1rem 2rem;
+  border-radius: 5px;
+  width: 100%;
+  padding-left: 6rem;
+  font-family: "nunito regular";
+  color: #343a40;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+.forgotpass__block-input::-webkit-input-placeholder {
+  color: #8b8989;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-family: "nunito regular";
+}
+
+.forgotpass__block-input:-ms-input-placeholder {
+  color: #8b8989;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-family: "nunito regular";
+}
+
+.forgotpass__block-input::-ms-input-placeholder {
+  color: #8b8989;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-family: "nunito regular";
+}
+
+.forgotpass__block-input::placeholder {
+  color: #8b8989;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-family: "nunito regular";
+}
+
+.forgotpass__block-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  background-color: transparent;
+  z-index: 2;
+}
+
+.forgotpass__block-button::after {
+  margin-left: 4px;
+  display: block;
+  content: "";
+  height: 4rem;
+  width: 1px;
+  background-color: #e6ebf4;
+}
+
+.forgotpass__block-icon {
+  height: 2rem;
+  width: 2rem;
+  fill: #574f49;
+}
+
+.forgotpass__block-submit {
+  border: none;
+  outline: none;
+  padding: .6rem 0;
+  border-radius: 5px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: -1.4rem;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.forgotpass__block-submit > span {
+  color: #f6f9f3;
+  font-size: 1.6rem;
+  font-family: "nunito bold";
+}
+
+.forgotpass__block-submit.first {
+  background-color: #669933;
+  margin-bottom: 1.5rem;
+}
+
+.forgotpass__block-submit.first:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  background-color: #689550;
+}
+
+.forgotpass__block-submit.second {
+  background-color: #3c90df;
+}
+
+.forgotpass__block-submit.second:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  background-color: #409eff;
+}
+
+.forgotpass__block-submit > svg {
+  height: 1.8rem;
+  width: 1.8rem;
+  fill: #f6f9f3;
+  margin-right: 1rem;
+}
+/*# sourceMappingURL=styles.css.map */

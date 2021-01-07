@@ -1,0 +1,241 @@
+.container {
+    height: 100vh;
+    width: 100%;
+    background-image: url(../assets/images/background.jpeg);
+    background-size: cover;
+    background-position: top left;
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: 575px) {
+        height: auto;
+        padding: 2% 0;
+    }
+}
+
+.signup__block {
+    padding: 8.5rem 3.5rem;
+    margin: auto;
+    width: 58%;
+    height: auto;
+    background-color: hsla(120, 2%, 1%, 0.3);
+    ;
+    box-shadow: 0 0.5rem 3.5rem #d4e4d3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10rem;
+    border-radius: 5px;
+
+    @media screen and (max-width: 991px) {
+        padding: 4rem 2rem;
+        grid-column-gap: 5rem;
+    }
+
+    @media screen and (max-width: 832px) {
+        padding: 6rem 2rem;
+        grid-column-gap: 5rem;
+    }
+
+    @media screen and (max-width: 767px) {
+        padding: 2rem 3rem;
+        width: 77%;
+        display: flex;
+        flex-direction: column-reverse;
+        grid-column-gap: 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media screen and (max-width: 575px) {
+        padding: 2rem 3.5rem;
+        width: 95%;
+    }
+
+    &-col1 {
+        @media screen and (max-width: 767px) {
+            width: 105%;
+        }
+    }
+
+    &-col2 {
+        @media screen and (max-width: 767px) {
+            width: 100%;
+            margin-bottom: 6rem;
+        }
+    }
+
+    &-info {
+        letter-spacing: 1px;
+        padding: 1rem;
+        font-size: 1.5rem;
+        text-align: center;
+        background-color: #f9dcd1;
+        color: #74290e;
+        border-color: #f6cebf;
+        border-radius: 5px;
+
+        @media screen and (max-width: 767px) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &-btn {
+        margin-top: 1.5rem;
+        padding: 1rem 0;
+        border-radius: 5px;
+        font-size: 1.4rem;
+        font-family: "nunito bold";
+        font-weight: 700;
+        color: $color-white;
+        background-color: #3c90df;
+        text-align: center;
+        transition: all .3s;
+
+        &:hover {
+            background-color: #409eff;
+            box-shadow: 0 1px 1rem rgba(#d4e4d3, 0.4);
+            transform: translateY(-2px);
+        }
+    }
+
+    &-logo {
+        align-self: flex-end;
+        display: flex;
+        align-items: center;
+        margin-bottom: 3rem;
+        padding-right: 3rem;
+
+        img {
+            margin-right: 1rem;
+        }
+
+        @media screen and (max-width: 1024px) {
+            flex-direction: column;
+        }
+
+        @media screen and (max-width: 991px) {
+            flex-direction: row;
+        }
+
+        @media screen and (max-width: 832px) {
+            flex-direction: column;
+        }
+
+        @media screen and (max-width: 767px) {
+            flex-direction: row;
+            align-self: center;
+        }
+
+        &>span {
+            color: $color-white;
+            font-family: "nunito bold";
+            font-size: 3.6rem;
+
+            @media screen and (max-width: 767px) {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    &-title {
+        color: $color-white;
+        font-family: "nunito semibold";
+        font-size: 2.4rem;
+        margin-bottom: 2rem;
+
+        @media screen and (max-width: 575px) {
+            font-size: 2rem;
+        }
+    }
+
+    &-submit {
+        border: none;
+        outline: none;
+        padding: .6rem 0;
+        border-radius: 5px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: -1.4rem;
+        transition: all .4s;
+
+        >span {
+            color: $color-white;
+            font-size: 1.6rem;
+            font-family: "nunito bold";
+        }
+
+        &.first {
+            background-color: #82b54b;
+            margin-bottom: 1.5rem;
+
+            &:hover {
+                background-color: #689550;
+            }
+        }
+
+        &.second {
+            background-color: #343a40;
+
+            &:hover {
+                background-color: #000000;
+            }
+        }
+
+        >svg {
+            height: 1.8rem;
+            width: 1.8rem;
+            fill: $color-white;
+            margin-right: 1rem;
+        }
+    }
+}
+
+.signup__block {
+    &-form {
+        @media screen and (max-width: 767px) {
+            margin-right: -3rem;
+        }
+
+        >span {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &-input {
+        margin-left: -3.5rem;
+        background-color: $color-white;
+        border: none;
+        outline: none;
+        padding: 1.1rem 2rem;
+        border-radius: 5px;
+        width: 100%;
+        padding-left: 6rem;
+        font-family: "nunito regular";
+        color: #343a40;
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+
+        &::placeholder {
+            color: rgb(139, 137, 137);
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            font-family: "nunito regular";
+        }
+
+    }
+
+    &-button {
+        border: none;
+        background-color: transparent;
+        z-index: 2;
+    }
+
+    &-icon {
+        height: 2rem;
+        width: 2rem;
+        fill: #574f49;
+    }
+}
